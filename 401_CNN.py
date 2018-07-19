@@ -20,7 +20,7 @@ import matplotlib.pyplot as plt
 # torch.manual_seed(1)    # reproducible
 
 # Hyper Parameters
-EPOCH = 1               # train the training data n times, to save time, we just train 1 epoch
+EPOCH = 10               # train the training data n times, to save time, we just train 1 epoch
 BATCH_SIZE = 50
 LR = 0.001              # learning rate
 DOWNLOAD_MNIST = False
@@ -28,7 +28,7 @@ DOWNLOAD_MNIST = False
 
 # Mnist digits dataset
 if not(os.path.exists('./mnist/')) or not os.listdir('./mnist/'):
-    # not mnist dir or mnist is empyt dir
+    # not mnist dir or mnist is empty dir
     DOWNLOAD_MNIST = True
 
 train_data = torchvision.datasets.MNIST(
